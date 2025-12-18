@@ -3,6 +3,10 @@
 // Ranking by correct count: 0-5 Beginner | 6-8 Intermediate | 9-10 Knows everything
 
 const questions = [
+  // ======================
+  // BEGINNER (1–10)
+  // ======================
+
   {
     text: "What is Vancouver consistently ranked as?",
     options: [
@@ -92,8 +96,121 @@ const questions = [
     ],
     correctIndex: 2,
     image: "images/vancouver-10.jpg"
+  },
+
+  // ======================
+  // INTERMEDIATE (11–20) — PLACEHOLDERS
+  // ======================
+
+  ...Array.from({ length: 10 }, (_, i) => ({
+    text: `Intermediate question ${i + 1} (to be added)`,
+    options: [
+      "Placeholder answer A",
+      "Placeholder answer B",
+      "Placeholder answer C",
+      "Placeholder answer D"
+    ],
+    correctIndex: 0,
+    image: "images/vancouver-placeholder.jpg"
+  })),
+
+  // ======================
+  // EXPERT (21–30)
+  // ======================
+
+  {
+    text: "Which Indigenous group’s name is most directly associated with the area now known as False Creek?",
+    options: ["Musqueam", "Tsleil-Waututh", "Squamish", "Haida"],
+    correctIndex: 2,
+    image: "images/vancouver-expert-21.jpg"
+  },
+  {
+    text: "Which event directly triggered the rapid rebuilding and incorporation of Vancouver in 1886?",
+    options: [
+      "Completion of the Canadian Pacific Railway terminus",
+      "The Great Vancouver Fire",
+      "Discovery of gold in the Fraser Canyon",
+      "Establishment of Stanley Park"
+    ],
+    correctIndex: 1,
+    image: "images/vancouver-expert-22.jpg"
+  },
+  {
+    text: "Which geological feature most strongly influenced the steep elevation changes in North Vancouver?",
+    options: [
+      "Volcanic lava flows",
+      "Alpine glaciation",
+      "Tectonic rifting",
+      "River sediment deposition"
+    ],
+    correctIndex: 1,
+    image: "images/vancouver-expert-23.jpg"
+  },
+  {
+    text: "Which of the following neighbourhoods is NOT located on the Burrard Peninsula?",
+    options: ["Kitsilano", "Mount Pleasant", "Kerrisdale", "Hastings-Sunrise"],
+    correctIndex: 2,
+    image: "images/vancouver-expert-24.jpg"
+  },
+  {
+    text: "The Lions Gate Bridge was financed primarily by which family?",
+    options: ["Bentall", "Guinness", "Rockefeller", "Douglas"],
+    correctIndex: 1,
+    image: "images/vancouver-expert-25.jpg"
+  },
+  {
+    text: "Which Pacific salmon species is least likely to spawn in the rivers and streams of Metro Vancouver?",
+    options: ["Chinook", "Coho", "Sockeye", "Pink"],
+    correctIndex: 2,
+    image: "images/vancouver-expert-26.jpg"
+  },
+  {
+    text: "What is the deepest natural point within Vancouver city limits (excluding the ocean)?",
+    options: [
+      "Trout Lake",
+      "Lost Lagoon",
+      "Capilano River Canyon",
+      "Renfrew Ravine"
+    ],
+    correctIndex: 3,
+    image: "images/vancouver-expert-27.jpg"
+  },
+  {
+    text: "Which zoning decision most significantly shaped Vancouver’s reputation for high-density residential towers without freeways?",
+    options: [
+      "The 1956 Urban Renewal Act",
+      "The 1972 Freeway Rejection Plan",
+      "The 1989 Expo Lands Rezoning",
+      "The 2001 Livable Region Strategy"
+    ],
+    correctIndex: 1,
+    image: "images/vancouver-expert-28.jpg"
+  },
+  {
+    text: "Which climate classification best describes Vancouver’s long-term average climate under the Köppen system?",
+    options: [
+      "Csb – Warm-summer Mediterranean",
+      "Cfb – Oceanic",
+      "Dfb – Humid continental",
+      "Cfa – Humid subtropical"
+    ],
+    correctIndex: 1,
+    image: "images/vancouver-expert-29.jpg"
+  },
+  {
+    text: "Which mountain is NOT visible from Vancouver on a clear day despite common belief?",
+    options: [
+      "Mount Baker",
+      "Mount Robson",
+      "Mount Garibaldi",
+      "Golden Ears"
+    ],
+    correctIndex: 1,
+    image: "images/vancouver-expert-30.jpg"
   }
 ];
+
+
 
 // Elements
 const startBtn = document.getElementById("startBtn");
@@ -206,7 +323,7 @@ function computeStreak() {
 }
 
 function getRanking(correct) {
-  if (correct <= 5) {
+  if (correct <= 10) {
     return {
       title: "Beginner",
       subtitle: "You’re getting started — keep exploring Vancouver!",
@@ -214,17 +331,17 @@ function getRanking(correct) {
       image: "images/vancouver-beginner.jpg"
     };
   }
-  if (correct <= 8) {
+  if (correct <= 20) {
     return {
       title: "Intermediate",
-      subtitle: "Nice! You know a lot about Vancouver already.",
+      subtitle: "Solid knowledge! You know Vancouver pretty well.",
       icon: mapleSVG(),
       image: "images/vancouver-intermediate.jpg"
     };
   }
   return {
     title: "Knows Everything",
-    subtitle: "Okay, wow — you really know Vancouver 🔥",
+    subtitle: "Okay, wow — you REALLY know Vancouver 🔥",
     icon: trophySVG(),
     image: "images/vancouver-pro.jpg"
   };
@@ -338,7 +455,10 @@ function showResults() {
         <div class="rank-sub">${rank.subtitle}</div>
       </div>
     </div>
-    <div class="mini-badge">${correctCount} / 10 correct • ${score} pts</div>
+    <div class="mini-badge">
+      ${correctCount} / ${questions.length} correct • ${score} pts
+    </div>
+
   `;
 }
 
