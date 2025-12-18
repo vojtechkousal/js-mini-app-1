@@ -3,11 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vancouver JS Quiz</title>
-    <link rel="stylesheet" src="style.css">
+    <title>Vancouver Quiz</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <script src="script.js"></script>
+
+    <main class="quiz-app">
+
+        <!-- HEADER -->
+        <header class="quiz-header">
+            <h1>Web Development Quiz</h1>
+            <div class="quiz-meta">
+                <span id="question-counter">Question 1 / 10</span>
+                <span id="timer">⏱ 30s</span>
+            </div>
+        </header>
+
+        <!-- QUESTION -->
+        <section class="quiz-question">
+            <h2 id="question-text">
+                Question text will appear here
+            </h2>
+        </section>
+
+        <!-- ANSWERS -->
+        <section class="quiz-answers">
+            <button class="answer-btn">Answer A</button>
+            <button class="answer-btn">Answer B</button>
+            <button class="answer-btn">Answer C</button>
+            <button class="answer-btn">Answer D</button>
+        </section>
+
+        <!-- FEEDBACK -->
+        <section class="quiz-feedback" id="feedback">
+            <!-- Correct / Wrong feedback inserted by JS -->
+        </section>
+
+        <!-- NAVIGATION -->
+        <section class="quiz-controls">
+            <button id="next-btn" disabled>Next Question</button>
+        </section>
+
+        <!-- RESULT (hidden by default) -->
+        <section class="quiz-result hidden" id="result">
+            <h2>Your Result</h2>
+            <p id="score-text">You scored 0 / 10</p>
+            <p id="result-message">Message based on score</p>
+            <button id="restart-btn">Restart Quiz</button>
+        </section>
+
+    </main>
+
 </body>
 </html>
