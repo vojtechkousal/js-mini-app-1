@@ -102,18 +102,120 @@ const questions = [
   // INTERMEDIATE (11–20) — PLACEHOLDERS
   // ======================
 
-  ...Array.from({ length: 10 }, (_, i) => ({
-    text: `Intermediate question ${i + 1} (to be added)`,
+  {
+    text: `What are some of the main industries that contribute to Vancouver’s economy?`,
     options: [
-      "Placeholder answer A",
-      "Placeholder answer B",
-      "Placeholder answer C",
-      "Placeholder answer D"
+      "Agriculture and mining only",
+      "Film production, technology, and tourism",
+      "Automotive manufacturing",
+      "Space exploration"
     ],
     correctIndex: 0,
     image: "images/van11.webp"
   })),
 
+    correctIndex: 1,
+    image: "images/vancouver-placeholder.jpg"
+  },
+  {
+    text: `Why is Vancouver considered one of the most multicultural cities in Canada?`,
+    options: [
+      "Because it has very few immigrants",
+      "Because people from many different countries live there",
+      "Because only Canadians are allowed to live there",
+      "Because it has only one cultural group"
+    ],
+    correctIndex: 1,
+    image: "images/vancouver-placeholder.jpg"
+  },
+  {
+    text: `How does Vancouver’s geographical location influence its climate?`,
+    options: [
+      "It has extremely cold winters like the Arctic",
+      "It has a mild and rainy climate due to the Pacific Ocean",
+      "It is very dry all year round",
+      "It has desert-like weather"
+    ],
+    correctIndex: 1,
+    image: "images/vancouver-placeholder.jpg"
+  },
+  {
+    text: `What role does the Port of Vancouver play in Canada’s economy?`,
+    options: [
+      "It is used only for local fishing",
+      "It is mainly a tourist attraction",
+      "It is the largest port and supports international trade",
+      "It is closed during winter"
+    ],
+    correctIndex: 2,
+    image: "images/vancouver-placeholder.jpg"
+  },
+  {
+    text: `How has tourism impacted Vancouver’s development?`,
+    options: [
+      "It has reduced job opportunities",
+      "It has had no effect on the city",
+      "It has helped create jobs and improve infrastructure",
+      "It has stopped urban growth"
+    ],
+    correctIndex: 2,
+    image: "images/vancouver-placeholder.jpg"
+  },
+  {
+    text: `What are popular outdoor activities in Vancouver?`,
+    options: [
+      "Sandboarding and camel riding",
+      "Skiing, hiking, and kayaking",
+      "Only indoor sports",
+      "Activities limited to summer"
+    ],
+    correctIndex: 1,
+    image: "images/vancouver-placeholder.jpg"
+  },
+  {
+    text: `How does public transportation in Vancouver help the environment?`,
+    options: [
+      "By increasing traffic congestion",
+      "By encouraging people to use more cars",
+      "By reducing car use and lowering emissions",
+      "By making travel slower"
+    ],
+    correctIndex: 2,
+    image: "images/vancouver-placeholder.jpg"
+  },
+  {
+    text: `How has Vancouver promoted environmental sustainability?`,
+    options: [
+      "By ignoring environmental policies",
+      "By increasing pollution",
+      "By developing green buildings and bike lanes",
+      "By banning public transportation"
+    ],
+    correctIndex: 2,
+    image: "images/vancouver-placeholder.jpg"
+  },
+  {
+    text: `Why is Vancouver a popular filming location?`,
+    options: [
+      "Because of its extreme weather",
+      "Because it looks similar to many world cities and offers tax incentives",
+      "Because there are no filming rules",
+      "Because movies are cheaper in other cities"
+    ],
+    correctIndex: 1,
+    image: "images/vancouver-placeholder.jpg"
+  },
+  {
+    text: `What is one major challenge Vancouver faces today?`,
+    options: [
+      "Lack of natural scenery",
+      "Too many historical buildings",
+      "Housing affordability and high living costs",
+      "Low population growth"
+    ],
+    correctIndex: 2,
+    image: "images/vancouver-placeholder.jpg"
+  },
   // ======================
   // EXPERT (21–30)
   // ======================
