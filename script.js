@@ -16,13 +16,13 @@ const questions = [
       "The oldest city in North America"
     ],
     correctIndex: 1,
-    image: "images/vancouver-1.jpg"
+    image: "images/van1.webp"
   },
   {
     text: "Which ocean is Vancouver located next to?",
     options: ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Arctic Ocean"],
     correctIndex: 2,
-    image: "images/vancouver-2.jpg"
+    image: "images/van2.webp"
   },
   {
     text: "What is Stanley Park famous for?",
@@ -33,7 +33,7 @@ const questions = [
       "Having the tallest buildings in Vancouver"
     ],
     correctIndex: 1,
-    image: "images/vancouver-3.jpg"
+    image: "images/van3.webp"
   },
   {
     text: "Why is Vancouver often called “Hollywood North”?",
@@ -44,13 +44,13 @@ const questions = [
       "It was founded by Hollywood producers"
     ],
     correctIndex: 2,
-    image: "images/vancouver-4.jpg"
+    image: "images/van4.webp"
   },
   {
     text: "Which mountain range can be seen from Vancouver?",
     options: ["Andes", "Alps", "Rocky Mountains", "Coast Mountains"],
     correctIndex: 3,
-    image: "images/vancouver-5.jpg"
+    image: "images/van5.webp"
   },
   {
     text: "What makes Vancouver’s climate unusual compared to most Canadian cities?",
@@ -61,13 +61,13 @@ const questions = [
       "It has desert weather"
     ],
     correctIndex: 1,
-    image: "images/vancouver-6.jpg"
+    image: "images/van6.webp"
   },
   {
     text: "What popular outdoor activity is easy to do in Vancouver year-round?",
     options: ["Sandboarding", "Ice fishing", "Hiking", "Camel riding"],
     correctIndex: 2,
-    image: "images/vancouver-7.jpg"
+    image: "images/van7.webp"
   },
   {
     text: "What is Granville Island best known for?",
@@ -78,13 +78,13 @@ const questions = [
       "Ski resorts"
     ],
     correctIndex: 1,
-    image: "images/vancouver-8.jpg"
+    image: "images/van8.webp"
   },
   {
     text: "Which animal is commonly seen in and around Vancouver?",
     options: ["Polar bears", "Kangaroos", "Raccoons", "Camels"],
     correctIndex: 2,
-    image: "images/vancouver-9.jpg"
+    image: "images/van9.webp"
   },
   {
     text: "What makes Vancouver unique geographically?",
@@ -95,7 +95,7 @@ const questions = [
       "It is below sea level"
     ],
     correctIndex: 2,
-    image: "images/vancouver-10.jpg"
+    image: "images/van10.webp"
   },
 
   // ======================
@@ -110,6 +110,10 @@ const questions = [
       "Automotive manufacturing",
       "Space exploration"
     ],
+    correctIndex: 0,
+    image: "images/van11.webp"
+  })),
+
     correctIndex: 1,
     image: "images/vancouver-placeholder.jpg"
   },
@@ -220,7 +224,7 @@ const questions = [
     text: "Which Indigenous group’s name is most directly associated with the area now known as False Creek?",
     options: ["Musqueam", "Tsleil-Waututh", "Squamish", "Haida"],
     correctIndex: 2,
-    image: "images/vancouver-expert-21.jpg"
+    image: "images/van1.webp"
   },
   {
     text: "Which event directly triggered the rapid rebuilding and incorporation of Vancouver in 1886?",
@@ -231,7 +235,7 @@ const questions = [
       "Establishment of Stanley Park"
     ],
     correctIndex: 1,
-    image: "images/vancouver-expert-22.jpg"
+    image: "images/van2.webp"
   },
   {
     text: "Which geological feature most strongly influenced the steep elevation changes in North Vancouver?",
@@ -242,25 +246,25 @@ const questions = [
       "River sediment deposition"
     ],
     correctIndex: 1,
-    image: "images/vancouver-expert-23.jpg"
+    image: "images/van3.webp"
   },
   {
     text: "Which of the following neighbourhoods is NOT located on the Burrard Peninsula?",
     options: ["Kitsilano", "Mount Pleasant", "Kerrisdale", "Hastings-Sunrise"],
     correctIndex: 2,
-    image: "images/vancouver-expert-24.jpg"
+    image: "images/van2webp"
   },
   {
     text: "The Lions Gate Bridge was financed primarily by which family?",
     options: ["Bentall", "Guinness", "Rockefeller", "Douglas"],
     correctIndex: 1,
-    image: "images/vancouver-expert-25.jpg"
+    image: "images/van3.webp"
   },
   {
     text: "Which Pacific salmon species is least likely to spawn in the rivers and streams of Metro Vancouver?",
     options: ["Chinook", "Coho", "Sockeye", "Pink"],
     correctIndex: 2,
-    image: "images/vancouver-expert-26.jpg"
+    image: "images/van4.webp"
   },
   {
     text: "What is the deepest natural point within Vancouver city limits (excluding the ocean)?",
@@ -271,7 +275,7 @@ const questions = [
       "Renfrew Ravine"
     ],
     correctIndex: 3,
-    image: "images/vancouver-expert-27.jpg"
+    image: "images/van5.webp"
   },
   {
     text: "Which zoning decision most significantly shaped Vancouver’s reputation for high-density residential towers without freeways?",
@@ -282,7 +286,7 @@ const questions = [
       "The 2001 Livable Region Strategy"
     ],
     correctIndex: 1,
-    image: "images/vancouver-expert-28.jpg"
+    image: "images/van6.webp"
   },
   {
     text: "Which climate classification best describes Vancouver’s long-term average climate under the Köppen system?",
@@ -293,7 +297,7 @@ const questions = [
       "Cfa – Humid subtropical"
     ],
     correctIndex: 1,
-    image: "images/vancouver-expert-29.jpg"
+    image: "images/vanc7.web"
   },
   {
     text: "Which mountain is NOT visible from Vancouver on a clear day despite common belief?",
@@ -304,7 +308,7 @@ const questions = [
       "Golden Ears"
     ],
     correctIndex: 1,
-    image: "images/vancouver-expert-30.jpg"
+    image: "images/van8.jpg"
   }
 ];
 
