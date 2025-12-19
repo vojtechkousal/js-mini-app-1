@@ -2,316 +2,301 @@
 // Score: 10 points per correct answer
 // Ranking by correct count: 0-5 Beginner | 6-8 Intermediate | 9-10 Knows everything
 
-const questions = [
-  // ======================
-  // BEGINNER (1–10)
-  // ======================
 
-  {
-    text: "What is Vancouver consistently ranked as?",
-    options: [
-      "One of the coldest cities in Canada",
-      "One of the most livable cities in the world",
-      "The largest city in Canada",
-      "The oldest city in North America"
-    ],
-    correctIndex: 1,
-    image: "images/van1.webp"
-  },
-  {
-    text: "Which ocean is Vancouver located next to?",
-    options: ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Arctic Ocean"],
-    correctIndex: 2,
-    image: "images/van2.webp"
-  },
-  {
-    text: "What is Stanley Park famous for?",
-    options: [
-      "Being a desert park",
-      "Having the world’s longest seawall in an urban park",
-      "Being a theme park",
-      "Having the tallest buildings in Vancouver"
-    ],
-    correctIndex: 1,
-    image: "images/van3.webp"
-  },
-  {
-    text: "Why is Vancouver often called “Hollywood North”?",
-    options: [
-      "It has many movie stars living there",
-      "It has the largest movie theater in Canada",
-      "Many movies and TV shows are filmed there",
-      "It was founded by Hollywood producers"
-    ],
-    correctIndex: 2,
-    image: "images/van4.webp"
-  },
-  {
-    text: "Which mountain range can be seen from Vancouver?",
-    options: ["Andes", "Alps", "Rocky Mountains", "Coast Mountains"],
-    correctIndex: 3,
-    image: "images/van5.webp"
-  },
-  {
-    text: "What makes Vancouver’s climate unusual compared to most Canadian cities?",
-    options: [
-      "It has extremely hot summers",
-      "It has very little snowfall and mild winters",
-      "It never rains",
-      "It has desert weather"
-    ],
-    correctIndex: 1,
-    image: "images/van6.webp"
-  },
-  {
-    text: "What popular outdoor activity is easy to do in Vancouver year-round?",
-    options: ["Sandboarding", "Ice fishing", "Hiking", "Camel riding"],
-    correctIndex: 2,
-    image: "images/van7.webp"
-  },
-  {
-    text: "What is Granville Island best known for?",
-    options: [
-      "Luxury hotels",
-      "A public market and local artisans",
-      "Government buildings",
-      "Ski resorts"
-    ],
-    correctIndex: 1,
-    image: "images/van8.webp"
-  },
-  {
-    text: "Which animal is commonly seen in and around Vancouver?",
-    options: ["Polar bears", "Kangaroos", "Raccoons", "Camels"],
-    correctIndex: 2,
-    image: "images/van9.webp"
-  },
-  {
-    text: "What makes Vancouver unique geographically?",
-    options: [
-      "It is surrounded only by deserts",
-      "It is built entirely on islands",
-      "It is located between mountains and the ocean",
-      "It is below sea level"
-    ],
-    correctIndex: 2,
-    image: "images/van10.webp"
-  },
+  // ===============================
+  // QUESTIONS (30)
+  // ===============================
+  const questions = [
+    {
+      text: "What is Vancouver consistently ranked as?",
+      options: [
+        "One of the coldest cities in Canada",
+        "One of the most livable cities in the world",
+        "The largest city in Canada",
+        "The oldest city in North America"
+      ],
+      correctIndex: 1,
+      image: "images/van1.webp"
+    },
+    {
+      text: "Which ocean is Vancouver located next to?",
+      options: ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Arctic Ocean"],
+      correctIndex: 2,
+      image: "images/van2.webp"
+    },
+    {
+      text: "What is Stanley Park famous for?",
+      options: [
+        "Being a desert park",
+        "Having the world’s longest seawall in an urban park",
+        "Being a theme park",
+        "Having the tallest buildings in Vancouver"
+      ],
+      correctIndex: 1,
+      image: "images/van3.webp"
+    },
+    {
+      text: "Why is Vancouver often called “Hollywood North”?",
+      options: [
+        "It has many movie stars living there",
+        "It has the largest movie theater in Canada",
+        "Many movies and TV shows are filmed there",
+        "It was founded by Hollywood producers"
+      ],
+      correctIndex: 2,
+      image: "images/van4.webp"
+    },
+    {
+      text: "Which mountain range can be seen from Vancouver?",
+      options: ["Andes", "Alps", "Rocky Mountains", "Coast Mountains"],
+      correctIndex: 3,
+      image: "images/van5.webp"
+    },
+    {
+      text: "What makes Vancouver’s climate unusual compared to most Canadian cities?",
+      options: [
+        "It has extremely hot summers",
+        "It has very little snowfall and mild winters",
+        "It never rains",
+        "It has desert weather"
+      ],
+      correctIndex: 1,
+      image: "images/van6.webp"
+    },
+    {
+      text: "What popular outdoor activity is easy to do in Vancouver year-round?",
+      options: ["Sandboarding", "Ice fishing", "Hiking", "Camel riding"],
+      correctIndex: 2,
+      image: "images/van7.webp"
+    },
+    {
+      text: "What is Granville Island best known for?",
+      options: [
+        "Luxury hotels",
+        "A public market and local artisans",
+        "Government buildings",
+        "Ski resorts"
+      ],
+      correctIndex: 1,
+      image: "images/van8.webp"
+    },
+    {
+      text: "Which animal is commonly seen in and around Vancouver?",
+      options: ["Polar bears", "Kangaroos", "Raccoons", "Camels"],
+      correctIndex: 2,
+      image: "images/van9.webp"
+    },
+    {
+      text: "What makes Vancouver unique geographically?",
+      options: [
+        "It is surrounded only by deserts",
+        "It is built entirely on islands",
+        "It is located between mountains and the ocean",
+        "It is below sea level"
+      ],
+      correctIndex: 2,
+      image: "images/van10.webp"
+    },
 
-  // ======================
-  // INTERMEDIATE (11–20) — PLACEHOLDERS
-  // ======================
+    // INTERMEDIATE (11–20)
+    {
+      text: "Which industries are major contributors to Vancouver’s economy?",
+      options: [
+        "Agriculture and mining only",
+        "Film production, technology, and tourism",
+        "Automotive manufacturing",
+        "Space exploration"
+      ],
+      correctIndex: 1,
+      image: "images/van11.webp"
+    },
+    {
+      text: "Why is Vancouver considered one of Canada’s most multicultural cities?",
+      options: [
+        "Few immigrants live there",
+        "People from many countries live there",
+        "Only Canadians are allowed to live there",
+        "It has one dominant cultural group"
+      ],
+      correctIndex: 1,
+      image: "images/van1.webp"
+    },
+    {
+      text: "How does Vancouver’s location influence its climate?",
+      options: [
+        "Arctic air dominates year-round",
+        "The Pacific Ocean moderates temperatures",
+        "The city is extremely dry",
+        "Desert winds affect the city"
+      ],
+      correctIndex: 1,
+      image: "images/van2.webp"
+    },
+    {
+      text: "What role does the Port of Vancouver play in Canada?",
+      options: [
+        "Local fishing only",
+        "Tourism attraction",
+        "Largest port supporting global trade",
+        "Seasonal port"
+      ],
+      correctIndex: 2,
+      image: "images/van3.webp"
+    },
+    {
+      text: "How has tourism impacted Vancouver?",
+      options: [
+        "Reduced employment",
+        "No impact",
+        "Created jobs and improved infrastructure",
+        "Stopped urban growth"
+      ],
+      correctIndex: 2,
+      image: "images/van4.webp"
+    },
+    {
+      text: "Which outdoor activities are popular in Vancouver?",
+      options: [
+        "Sandboarding and camel riding",
+        "Skiing, hiking, kayaking",
+        "Indoor sports only",
+        "Summer-only activities"
+      ],
+      correctIndex: 1,
+      image: "images/van5.webp"
+    },
+    {
+      text: "How does Vancouver’s public transit help the environment?",
+      options: [
+        "Increases traffic",
+        "Encourages car use",
+        "Reduces emissions",
+        "Slows travel"
+      ],
+      correctIndex: 2,
+      image: "images/van6.webp"
+    },
+    {
+      text: "How has Vancouver promoted sustainability?",
+      options: [
+        "Ignoring environmental issues",
+        "Increasing pollution",
+        "Green buildings and bike lanes",
+        "Banning transit"
+      ],
+      correctIndex: 2,
+      image: "images/van7.webp"
+    },
+    {
+      text: "Why is Vancouver attractive for film production?",
+      options: [
+        "Extreme weather",
+        "Similar look to many cities and tax incentives",
+        "No filming laws",
+        "Cheapest city"
+      ],
+      correctIndex: 1,
+      image: "images/van8.webp"
+    },
+    {
+      text: "What is a major challenge Vancouver faces today?",
+      options: [
+        "Lack of scenery",
+        "Too many historic buildings",
+        "Housing affordability",
+        "Low population"
+      ],
+      correctIndex: 2,
+      image: "images/van9.webp"
+    },
 
-  {
-    text: `What are some of the main industries that contribute to Vancouver’s economy?`,
-    options: [
-      "Agriculture and mining only",
-      "Film production, technology, and tourism",
-      "Automotive manufacturing",
-      "Space exploration"
-    ],
-    correctIndex: 0,
-    image: "images/van11.webp"
-  })),
-
-    correctIndex: 1,
-    image: "images/vancouver-placeholder.jpg"
-  },
-  {
-    text: `Why is Vancouver considered one of the most multicultural cities in Canada?`,
-    options: [
-      "Because it has very few immigrants",
-      "Because people from many different countries live there",
-      "Because only Canadians are allowed to live there",
-      "Because it has only one cultural group"
-    ],
-    correctIndex: 1,
-    image: "images/vancouver-placeholder.jpg"
-  },
-  {
-    text: `How does Vancouver’s geographical location influence its climate?`,
-    options: [
-      "It has extremely cold winters like the Arctic",
-      "It has a mild and rainy climate due to the Pacific Ocean",
-      "It is very dry all year round",
-      "It has desert-like weather"
-    ],
-    correctIndex: 1,
-    image: "images/vancouver-placeholder.jpg"
-  },
-  {
-    text: `What role does the Port of Vancouver play in Canada’s economy?`,
-    options: [
-      "It is used only for local fishing",
-      "It is mainly a tourist attraction",
-      "It is the largest port and supports international trade",
-      "It is closed during winter"
-    ],
-    correctIndex: 2,
-    image: "images/vancouver-placeholder.jpg"
-  },
-  {
-    text: `How has tourism impacted Vancouver’s development?`,
-    options: [
-      "It has reduced job opportunities",
-      "It has had no effect on the city",
-      "It has helped create jobs and improve infrastructure",
-      "It has stopped urban growth"
-    ],
-    correctIndex: 2,
-    image: "images/vancouver-placeholder.jpg"
-  },
-  {
-    text: `What are popular outdoor activities in Vancouver?`,
-    options: [
-      "Sandboarding and camel riding",
-      "Skiing, hiking, and kayaking",
-      "Only indoor sports",
-      "Activities limited to summer"
-    ],
-    correctIndex: 1,
-    image: "images/vancouver-placeholder.jpg"
-  },
-  {
-    text: `How does public transportation in Vancouver help the environment?`,
-    options: [
-      "By increasing traffic congestion",
-      "By encouraging people to use more cars",
-      "By reducing car use and lowering emissions",
-      "By making travel slower"
-    ],
-    correctIndex: 2,
-    image: "images/vancouver-placeholder.jpg"
-  },
-  {
-    text: `How has Vancouver promoted environmental sustainability?`,
-    options: [
-      "By ignoring environmental policies",
-      "By increasing pollution",
-      "By developing green buildings and bike lanes",
-      "By banning public transportation"
-    ],
-    correctIndex: 2,
-    image: "images/vancouver-placeholder.jpg"
-  },
-  {
-    text: `Why is Vancouver a popular filming location?`,
-    options: [
-      "Because of its extreme weather",
-      "Because it looks similar to many world cities and offers tax incentives",
-      "Because there are no filming rules",
-      "Because movies are cheaper in other cities"
-    ],
-    correctIndex: 1,
-    image: "images/vancouver-placeholder.jpg"
-  },
-  {
-    text: `What is one major challenge Vancouver faces today?`,
-    options: [
-      "Lack of natural scenery",
-      "Too many historical buildings",
-      "Housing affordability and high living costs",
-      "Low population growth"
-    ],
-    correctIndex: 2,
-    image: "images/vancouver-placeholder.jpg"
-  },
-  // ======================
-  // EXPERT (21–30)
-  // ======================
-
-  {
-    text: "Which Indigenous group’s name is most directly associated with the area now known as False Creek?",
-    options: ["Musqueam", "Tsleil-Waututh", "Squamish", "Haida"],
-    correctIndex: 2,
-    image: "images/van1.webp"
-  },
-  {
-    text: "Which event directly triggered the rapid rebuilding and incorporation of Vancouver in 1886?",
-    options: [
-      "Completion of the Canadian Pacific Railway terminus",
-      "The Great Vancouver Fire",
-      "Discovery of gold in the Fraser Canyon",
-      "Establishment of Stanley Park"
-    ],
-    correctIndex: 1,
-    image: "images/van2.webp"
-  },
-  {
-    text: "Which geological feature most strongly influenced the steep elevation changes in North Vancouver?",
-    options: [
-      "Volcanic lava flows",
-      "Alpine glaciation",
-      "Tectonic rifting",
-      "River sediment deposition"
-    ],
-    correctIndex: 1,
-    image: "images/van3.webp"
-  },
-  {
-    text: "Which of the following neighbourhoods is NOT located on the Burrard Peninsula?",
-    options: ["Kitsilano", "Mount Pleasant", "Kerrisdale", "Hastings-Sunrise"],
-    correctIndex: 2,
-    image: "images/van2webp"
-  },
-  {
-    text: "The Lions Gate Bridge was financed primarily by which family?",
-    options: ["Bentall", "Guinness", "Rockefeller", "Douglas"],
-    correctIndex: 1,
-    image: "images/van3.webp"
-  },
-  {
-    text: "Which Pacific salmon species is least likely to spawn in the rivers and streams of Metro Vancouver?",
-    options: ["Chinook", "Coho", "Sockeye", "Pink"],
-    correctIndex: 2,
-    image: "images/van4.webp"
-  },
-  {
-    text: "What is the deepest natural point within Vancouver city limits (excluding the ocean)?",
-    options: [
-      "Trout Lake",
-      "Lost Lagoon",
-      "Capilano River Canyon",
-      "Renfrew Ravine"
-    ],
-    correctIndex: 3,
-    image: "images/van5.webp"
-  },
-  {
-    text: "Which zoning decision most significantly shaped Vancouver’s reputation for high-density residential towers without freeways?",
-    options: [
-      "The 1956 Urban Renewal Act",
-      "The 1972 Freeway Rejection Plan",
-      "The 1989 Expo Lands Rezoning",
-      "The 2001 Livable Region Strategy"
-    ],
-    correctIndex: 1,
-    image: "images/van6.webp"
-  },
-  {
-    text: "Which climate classification best describes Vancouver’s long-term average climate under the Köppen system?",
-    options: [
-      "Csb – Warm-summer Mediterranean",
-      "Cfb – Oceanic",
-      "Dfb – Humid continental",
-      "Cfa – Humid subtropical"
-    ],
-    correctIndex: 1,
-    image: "images/vanc7.web"
-  },
-  {
-    text: "Which mountain is NOT visible from Vancouver on a clear day despite common belief?",
-    options: [
-      "Mount Baker",
-      "Mount Robson",
-      "Mount Garibaldi",
-      "Golden Ears"
-    ],
-    correctIndex: 1,
-    image: "images/van8.jpg"
-  }
-];
-
+    // EXPERT (21–30)
+    {
+      text: "Which Indigenous group is most associated with False Creek?",
+      options: ["Musqueam", "Tsleil-Waututh", "Squamish", "Haida"],
+      correctIndex: 2,
+      image: "images/van10.webp"
+    },
+    {
+      text: "What event led to Vancouver’s rapid rebuilding in 1886?",
+      options: [
+        "Railway completion",
+        "The Great Vancouver Fire",
+        "Gold rush",
+        "Stanley Park opening"
+      ],
+      correctIndex: 1,
+      image: "images/van11.webp"
+    },
+    {
+      text: "What geological process shaped North Vancouver’s terrain?",
+      options: [
+        "Volcanic activity",
+        "Glaciation",
+        "Tectonic rifting",
+        "Sediment deposits"
+      ],
+      correctIndex: 1,
+      image: "images/van1.webp"
+    },
+    {
+      text: "Which neighborhood is NOT on the Burrard Peninsula?",
+      options: ["Kitsilano", "Mount Pleasant", "Kerrisdale", "Hastings-Sunrise"],
+      correctIndex: 2,
+      image: "images/van2.webp"
+    },
+    {
+      text: "Which family financed the Lions Gate Bridge?",
+      options: ["Bentall", "Guinness", "Rockefeller", "Douglas"],
+      correctIndex: 1,
+      image: "images/van3.webp"
+    },
+    {
+      text: "Which salmon species is least common in Metro Vancouver rivers?",
+      options: ["Chinook", "Coho", "Sockeye", "Pink"],
+      correctIndex: 2,
+      image: "images/van4.webp"
+    },
+    {
+      text: "What is the deepest natural point within Vancouver city limits?",
+      options: [
+        "Trout Lake",
+        "Lost Lagoon",
+        "Capilano River Canyon",
+        "Renfrew Ravine"
+      ],
+      correctIndex: 3,
+      image: "images/van5.webp"
+    },
+    {
+      text: "Which decision shaped Vancouver’s dense urban form without freeways?",
+      options: [
+        "Urban Renewal Act",
+        "1972 Freeway Rejection",
+        "Expo Lands Rezoning",
+        "Livable Region Strategy"
+      ],
+      correctIndex: 1,
+      image: "images/van6.webp"
+    },
+    {
+      text: "What is Vancouver’s Köppen climate classification?",
+      options: ["Csb", "Cfb", "Dfb", "Cfa"],
+      correctIndex: 1,
+      image: "images/van7.webp"
+    },
+    {
+      text: "Which mountain is NOT visible from Vancouver on clear days?",
+      options: [
+        "Mount Baker",
+        "Mount Robson",
+        "Mount Garibaldi",
+        "Golden Ears"
+      ],
+      correctIndex: 1,
+      image: "images/van8.webp"
+    }
+  ];
 
 
 // Elements
