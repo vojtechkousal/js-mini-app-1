@@ -337,6 +337,7 @@ const resultsImage = document.getElementById("resultsImage");
 // State
 let currentIndex = 0;
 let selected = Array(questions.length).fill(null); // store selected option index
+let confirmed = Array(questions.length).fill(false); // store if answer is confirmed
 let score = 0;
 let correctCount = 0;
 let streak = 0;
@@ -398,12 +399,21 @@ function computeScore() {
 }
 
 function computeStreak() {
-  // streak: consecutive correct answers from start until first wrong/unanswered
   let s = 0;
   for (let i = 0; i < questions.length; i++) {
-    if (selected[i] === null) break;
-    if (selected[i] === questions[i].correctIndex) s++;
-    else break;
+
+    if (confirmed[i]) {
+      if (selected[i] === questions[i].correctIndex) {
+
+        s++;
+      } else {
+
+        s = 0;
+      }
+    } else {
+
+      break;
+    }
   }
   streak = s;
   streakBadge.textContent = `Streak: ${streak}`;
@@ -449,7 +459,7 @@ function renderQuestion() {
 
   // buttons state
   prevBtn.disabled = currentIndex === 0;
-  nextBtn.disabled = selected[currentIndex] === null;
+  nextBtn.disabled = !confirmed[currentIndex];
 
   // progress
   const total = questions.length;
@@ -461,6 +471,11 @@ function renderQuestion() {
   choicesEl.innerHTML = "";
   clearFeedback();
 
+  // Create confirm button
+  const confirmBtn = document.createElement("button");
+  confirmBtn.id = "confirmBtn";  confirmBtn.className = "btn primary";  confirmBtn.textContent = "Confirm";
+  confirmBtn.disabled = selected[currentIndex] === null || confirmed[currentIndex];
+
   q.options.forEach((opt, idx) => {
     const btn = document.createElement("button");
     btn.type = "button";
@@ -469,48 +484,46 @@ function renderQuestion() {
     btn.setAttribute("aria-pressed", selected[currentIndex] === idx ? "true" : "false");
 
     btn.addEventListener("click", () => {
-      // lock in selection for this question
-      selected[currentIndex] = idx;
-
-      // update UI pressed
-      [...choicesEl.querySelectorAll(".choice")].forEach(b => {
-        b.setAttribute("aria-pressed", "false");
-        b.classList.remove("correct", "wrong");
-      });
-      btn.setAttribute("aria-pressed", "true");
-
-      // show correctness
-      const isCorrect = idx === q.correctIndex;
-      if (isCorrect) {
-        btn.classList.add("correct");
-        feedbackEl.textContent = "✅ Correct! +10 points";
-      } else {
-        btn.classList.add("wrong");
-        feedbackEl.textContent = `❌ Oops! Correct answer: "${q.options[q.correctIndex]}"`;
+      if (!confirmed[currentIndex]) {
+        selected[currentIndex] = idx;
+        // update UI pressed
+        [...choicesEl.querySelectorAll(".choice")].forEach(b => {
+          b.setAttribute("aria-pressed", "false");
+        });
+        btn.setAttribute("aria-pressed", "true");
+        confirmBtn.disabled = false;  
       }
-
-      computeScore();
-      computeStreak();
-
-      nextBtn.disabled = false;
     });
 
     choicesEl.appendChild(btn);
   });
 
-  // if already selected, visually mark it
-  if (selected[currentIndex] !== null) {
+  // Add confirm button event
+  confirmBtn.addEventListener("click", () => {
+    if (selected[currentIndex] !== null && !confirmed[currentIndex]) {
+      confirmed[currentIndex] = true;
+      const chosenIndex = selected[currentIndex];
+      const chosenBtn = choicesEl.querySelectorAll(".choice")[chosenIndex];
+      const isCorrect = chosenIndex === q.correctIndex;
+      chosenBtn.classList.add(isCorrect ? "correct" : "wrong");
+      feedbackEl.textContent = isCorrect ? "✅ Correct! +10 points" : `❌ Oops! Correct answer: "${q.options[q.correctIndex]}"`;
+      computeScore();
+      computeStreak();
+      confirmBtn.disabled = true;
+      nextBtn.disabled = false;
+    }
+  });
+  choicesEl.appendChild(confirmBtn);
+
+  // if already confirmed, show feedback
+  if (confirmed[currentIndex]) {
     const chosenIndex = selected[currentIndex];
     const chosenBtn = choicesEl.querySelectorAll(".choice")[chosenIndex];
     const isCorrect = chosenIndex === q.correctIndex;
-
-    chosenBtn.setAttribute("aria-pressed", "true");
     chosenBtn.classList.add(isCorrect ? "correct" : "wrong");
     feedbackEl.textContent = isCorrect
       ? "✅ Correct! +10 points"
       : `❌ Oops! Correct answer: "${q.options[q.correctIndex]}"`;
-
-    nextBtn.disabled = false;
   }
 }
 
@@ -552,6 +565,7 @@ function showResults() {
 function resetAll() {
   currentIndex = 0;
   selected = Array(questions.length).fill(null);
+  confirmed = Array(questions.length).fill(false);
   score = 0;
   correctCount = 0;
   streak = 0;
@@ -573,7 +587,7 @@ function resetAll() {
 }
 
 function goNext() {
-  if (selected[currentIndex] === null) return;
+  if (!confirmed[currentIndex]) return;
 
   if (currentIndex === questions.length - 1) {
     showResults();
@@ -615,7 +629,7 @@ function buildReview() {
 
 // Events
 startBtn.addEventListener("click", () => {
-  // Keep hero visible; just open quiz card
+
   showQuiz();
 });
 
