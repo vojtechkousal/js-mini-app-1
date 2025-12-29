@@ -214,7 +214,7 @@
     {
       text: "Which Indigenous group is most associated with False Creek?",
       options: ["Musqueam", "Tsleil-Waututh", "Squamish", "Haida"],
-      correctIndex: 2,
+      correctIndex: 3,
       image: "images/van10.webp"
     },
     {
@@ -225,7 +225,7 @@
         "Gold rush",
         "Stanley Park opening"
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       image: "images/van11.webp"
     },
     {
@@ -236,25 +236,25 @@
         "Tectonic rifting",
         "Sediment deposits"
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       image: "images/van1.webp"
     },
     {
       text: "Which neighborhood is NOT on the Burrard Peninsula?",
       options: ["Kitsilano", "Mount Pleasant", "Kerrisdale", "Hastings-Sunrise"],
-      correctIndex: 2,
+      correctIndex: 3,
       image: "images/van2.webp"
     },
     {
       text: "Which family financed the Lions Gate Bridge?",
       options: ["Bentall", "Guinness", "Rockefeller", "Douglas"],
-      correctIndex: 1,
+      correctIndex: 2,
       image: "images/van3.webp"
     },
     {
       text: "Which salmon species is least common in Metro Vancouver rivers?",
       options: ["Chinook", "Coho", "Sockeye", "Pink"],
-      correctIndex: 2,
+      correctIndex: 3,
       image: "images/van4.webp"
     },
     {
@@ -265,7 +265,7 @@
         "Capilano River Canyon",
         "Renfrew Ravine"
       ],
-      correctIndex: 3,
+      correctIndex: 4,
       image: "images/van5.webp"
     },
     {
@@ -276,13 +276,13 @@
         "Expo Lands Rezoning",
         "Livable Region Strategy"
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       image: "images/van6.webp"
     },
     {
       text: "What is Vancouver’s Köppen climate classification?",
       options: ["Csb", "Cfb", "Dfb", "Cfa"],
-      correctIndex: 1,
+      correctIndex: 2,
       image: "images/van7.webp"
     },
     {
@@ -293,7 +293,7 @@
         "Mount Garibaldi",
         "Golden Ears"
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       image: "images/van8.webp"
     }
   ];
